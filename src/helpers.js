@@ -7,9 +7,6 @@ export const handleError = (handler, err) => {
 }
 
 export const makeEncryptor = transform => (state, key) => {
-  if (typeof state !== 'string') {
-    state = stringify(state)
-  }
   return transform(state)
 }
 
